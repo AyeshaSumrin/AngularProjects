@@ -1,1 +1,25 @@
-<p>contact-list works!</p>
+<mat-card class="contactlist-card" *ngFor="let contact of contactList">
+    <mat-card-header>
+        <div mat-card-avatar class="contact-header-image"
+            [ngStyle]="{'background-image': 'url(' + contact.avatar + ')'}"></div>
+        <mat-card-title>{{contact.name}}</mat-card-title>
+        <mat-card-subtitle>{{contact.username}}</mat-card-subtitle>
+        <div class="action-buttons">
+            <mat-card-actions>
+                <button mat-fab color="primary" aria-label="video call">
+                    <mat-icon>videocam</mat-icon>
+                </button>
+                <button mat-fab color="primary" aria-label="call">
+                    <a href="{{'tel:' + contact.phone }}"><mat-icon>call</mat-icon></a>
+                    <!-- <a href={{'tel:'+contact.phone}}></a> -->
+                    <!-- <mat-icon>call</mat-icon> -->
+                </button>
+                <button mat-fab color="primary" aria-label="mail">
+                    <a href="{{'mailto:' + contact.email }}"> <mat-icon>mail_outline</mat-icon> </a>
+                   
+                </button>
+            </mat-card-actions>
+        </div>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+</mat-card>

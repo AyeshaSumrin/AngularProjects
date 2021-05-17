@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiEndPoint: 'https://run.mocky.io/v3/',
+  appName: 'Contacts',
+  apiContactList: 'https://run.mocky.io/v3/f0e8c1b8-2fca-4da0-8fc0-9e7c2a949c36'
 };
 
 /*
